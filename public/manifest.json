@@ -1,0 +1,26 @@
+{
+  "name": "Buna House",
+  "short_name": "BunaHouse",
+  "description": "Premium Coffee Shop in Bole, Addis Ababa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FBF5EA",
+  "theme_color": "#C08552",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-icon.svg",
+      "sizes": "180x180",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["food", "shopping"],
+  "lang": "en-ET",
+  "dir": "ltr"
+}
