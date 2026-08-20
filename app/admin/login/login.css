@@ -1,0 +1,411 @@
+/* ============================================================
+   Buna House — Admin Login Page
+   ============================================================ */
+
+.login-page {
+  min-height: 100vh;
+  background: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--surface);
+  border: 1px solid var(--cream-line);
+  border-radius: 26px;
+  padding: 32px 36px;
+  box-shadow: 0 20px 50px -20px rgba(43, 24, 16, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ============================================================
+   Logo & Badge
+   ============================================================ */
+
+.login-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.login-logo-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: var(--brown);
+  color: var(--cream);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.login-logo-text {
+  font-family: var(--font-display), Georgia, serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.01em;
+  color: var(--espresso);
+}
+
+.login-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--panel);
+  color: var(--caramel-deep);
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  align-self: center;
+  margin-bottom: 8px;
+}
+
+.login-badge-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--caramel);
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Heading & Text
+   ============================================================ */
+
+.login-heading {
+  font-family: var(--font-display), Georgia, serif;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--espresso);
+  text-align: center;
+  margin-bottom: 4px;
+}
+
+.login-subtext {
+  font-size: 13px;
+  color: var(--espresso-dim);
+  text-align: center;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+/* ============================================================
+   Error Banner
+   ============================================================ */
+
+.login-error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--red-bg);
+  color: var(--red);
+  padding: 14px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.login-error svg {
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   Form & Fields
+   ============================================================ */
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.login-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--espresso-dim);
+}
+
+.login-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface);
+  border: 1.5px solid var(--cream-line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  transition: all 0.2s ease;
+}
+
+.login-input-wrapper:focus-within {
+  border-color: var(--caramel);
+  box-shadow: 0 0 0 3px rgba(192, 133, 82, 0.12);
+}
+
+.login-input-icon {
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+.login-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--espresso);
+  min-width: 0;
+}
+
+.login-input::placeholder {
+  color: var(--muted);
+  font-weight: 400;
+}
+
+.login-password-toggle {
+  padding: 4px;
+  border-radius: 6px;
+  color: var(--muted);
+  flex-shrink: 0;
+  transition: all 0.15s ease;
+  display: grid;
+  place-items: center;
+}
+
+.login-password-toggle:hover {
+  background: var(--panel);
+  color: var(--espresso-dim);
+}
+
+/* ============================================================
+   Remember Me & Forgot Password Row
+   ============================================================ */
+
+.login-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.login-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--espresso);
+}
+
+.login-checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1.5px solid var(--cream-line);
+  background: var(--surface);
+  display: grid;
+  place-items: center;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  color: transparent;
+}
+
+.login-checkbox:hover {
+  border-color: var(--caramel);
+}
+
+.login-checkbox-checked {
+  background: var(--brown);
+  border-color: var(--brown);
+  color: var(--cream);
+}
+
+.login-forgot {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--caramel-deep);
+  transition: color 0.15s ease;
+}
+
+.login-forgot:hover {
+  color: var(--caramel);
+}
+
+/* ============================================================
+   Submit Button
+   ============================================================ */
+
+.login-submit {
+  width: 100%;
+  background: var(--brown);
+  color: var(--cream);
+  border-radius: 12px;
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 6px 16px rgba(74, 46, 31, 0.2);
+  margin-top: 4px;
+}
+
+.login-submit:hover:not(:disabled) {
+  background: var(--brown-deep);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(74, 46, 31, 0.28);
+}
+
+.login-submit:disabled {
+  opacity: 0.9;
+  cursor: not-allowed;
+}
+
+.login-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(251, 245, 234, 0.3);
+  border-top-color: var(--cream);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============================================================
+   Portfolio Demo Banner
+   ============================================================ */
+
+.login-demo-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: var(--panel);
+  border: 1px dashed var(--caramel-deep);
+  padding: 12px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--espresso);
+  margin-bottom: 8px;
+}
+
+.login-demo-banner code {
+  background: var(--surface);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.login-demo-fill {
+  flex-shrink: 0;
+  background: var(--caramel-deep);
+  color: var(--cream);
+  border: none;
+  padding: 8px 14px;
+  border-radius: 100px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.login-demo-fill:hover {
+  opacity: 0.9;
+}
+
+/* ============================================================
+   Security Note
+   ============================================================ */
+
+.login-security {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--panel);
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.4;
+  margin-top: 4px;
+}
+
+.login-security svg {
+  flex-shrink: 0;
+  color: var(--caramel-deep);
+}
+
+/* ============================================================
+   Return Link
+   ============================================================ */
+
+.login-return {
+  text-align: center;
+  font-size: 13px;
+  color: var(--espresso-dim);
+  margin-top: 4px;
+}
+
+.login-return a {
+  color: var(--caramel-deep);
+  font-weight: 700;
+  transition: color 0.15s ease;
+}
+
+.login-return a:hover {
+  color: var(--caramel);
+}
+
+/* ============================================================
+   Responsive
+   ============================================================ */
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 36px 28px;
+  }
+
+  .login-heading {
+    font-size: 26px;
+  }
+
+  .login-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .login-forgot {
+    align-self: flex-end;
+  }
+}
