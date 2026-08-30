@@ -2,6 +2,19 @@
 
 Full-stack e-commerce site for a coffee shop in Bole, Addis Ababa, built with Next.js (App Router) and Supabase. It includes a public storefront (menu, cart, checkout) and an admin dashboard (products, orders, customers, leads, analytics) served from the same app via Next.js API routes — there is no separate backend service.
 
+## Live Demo
+
+- **Storefront:** https://buna-house-ochre.vercel.app
+- **Admin dashboard:** https://buna-house-ochre.vercel.app/admin
+
+The admin dashboard has a read-only demo account, so you can browse every view (orders, products, customers, leads, analytics, settings) without setting anything up. Click **Use Demo Login** on the login page, or sign in with:
+
+| Email | Password |
+| --- | --- |
+| `demo@bunahouse.et` | `BunaDemo2026!` |
+
+The demo account sees real data, but all create/edit/delete requests are rejected server-side (`lib/auth.ts`), so nothing can be changed from it.
+
 ## Screenshots
 
 | Storefront | Menu | Admin Dashboard |
